@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #1B1B1B;
+    color:white;
+}
+
+.navbar, footer {
+    min-height: 100;
+    background-color: #2B2B2B;
+    font-size: 24;
+}
+
+.card-title {
+    color: #00FA09;
+}
+
+.nav-item {
+    margin: 5px;
+}
+
+.navbar a {
+    color: #FCDB38;
+}
+
+h1, h4 {
+    color: #FCDB38;
+}
+
+i {
+    font-size: 20px;
+    color:white;
+}
+
+
+.home-container 
+{  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pic logo featured"
+      "pic about repos"
+      ". . contact";
+      margin: 5px;
+  }
+  
+  .pic { grid-area: pic; }
+  
+  .about { grid-area: about; }
+  
+  .logo { grid-area: logo; }
+  
+  .featured { grid-area: featured; }
+  
+  .repos { grid-area: repos; }
+  
+  .contact {grid-area: contact}
