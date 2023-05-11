@@ -1,76 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Final Portfolio">
-    <meta name="author" content="Ryan Plante">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-somehash" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-somehash" crossorigin="anonymous">
 </head>
+
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">RYAN PLANTE | Software Engineering Student</a>
+  <div class="slideshow-container">
+    <div class="slide show" id="home">
+      <section class="content">
+        <h1>Welcome to My Portfolio!</h1>
+        <p>My name is Ryan Plante, and I'm an aspiring Software Engineering student at NEIT. I'm passionate about building innovative software solutions. Take a look at my work and skills showcased below. Feel free to reach out if you're interested in collaborating or hiring!</p>
+        <br>
+        <h2>Featured Project</h2>
+        <div class="card-container" style="background-color:">
+          <div class="card">
+            <img src="images/screen-1.png" alt="NEIT-Lab Monitoring">
+            <h3>NEIT-Lab Monitoring</h3>
+            <p>A website written in ASP.NET that allows logging students that enter labs for logging purposes.</p>
+            <p>Year: 2023</p>
+            <a href="https://github.com/ryanplante/labMonitoring" target="_blank">View Repo</a>
           </div>
-          <ul class="nav navbar navbar-right">
-            <li class="nav-item"><a href="projects.html">Projects </a></li>
-            <li class="nav-item">
-              <a href="featured.html">Featured Projects</a>
-            </li>
-          </ul>
+      </section>
+    </div>
+
+    <div class="slide" id="projects">
+      <section class="content">
+        <h2>Projects</h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="images/screen-1.png" alt="NEIT-Lab Monitoring">
+            <h3>NEIT-Lab Monitoring</h3>
+            <p>A website written in ASP.NET that allows logging students that enter labs for logging purposes.</p>
+            <p>Year: 2023</p>
+            <a href="https://github.com/ryanplante/labMonitoring" target="_blank">View Repo</a>
+          </div>
+          <div class="card">
+            <img src="images/screen-2.png" alt="CloudPlanner">
+            <h3>CloudPlanner</h3>
+            <p>A cloud-based planner written in PHP.</p>
+            <p>Year: 2022</p>
+            <a href="https://github.com/ryanplante/CloudPlanner" target="_blank">View Repo</a>
+          </div>
+          <div class="card">
+            <img src="images/screen-3.png" alt="pyBitConverter">
+            <h3>pyBitConverter</h3>
+            <p>A console-based program written in Python to convert Binary, Hexadecimal, and Decimal numbers to other formats.</p>
+            <p>Year: 2021</p>
+            <a href="https://github.com/ryanplante/pyBitConverter" target="_blank">View Repo</a>
+          </div>
         </div>
+      </section>
+    </div>
+
+    <div class="slide" id="about">
+      <section class="content">
+        <h2>About Me</h2>
+        <p>I am a software engineer with expertise in web development. I have over 5 years of coding experience, starting from high school where I competed in game development and coding competitions. After high school, I further expanded my skills by self-teaching C, C#, C++, and creating mods and applications for jailbroken Nintendo consoles.</p>
+
+        <p>In late 2021, I started my software engineering degree, with a particular focus on web development. I have gained extensive knowledge in web development and I'm excited to showcase my skills. Currently, I am available for part-time opportunities. If you're looking to hire, feel free to contact me!</p>
+        
+        <p>Skills: Problem solving, leadership, troubleshooting, C, C#, C++, Unity, Java, Javascript, HTML, PHP, ASP.NET, SQL</p>
+      </section>
+    </div>
+
+    <div class="slide" id="applets">
+      <section class="content">
+        <h2>Applets</h2>
+        <p>Coming soon...</p>
+      </section>
+    </div>
+    
+    <div class="slide" id="contact">
+      <section class="content">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email:</p>
+        <a href="mailto:rmplante@email.neit.edu">
+          <img src="images/email.png" alt="Email" width="50" height="50">
+        </a>
+      </section>
+    </div>
+    
+    
+    
+    
+    <a class="nav-toggle" onclick="toggleNavigation()">&#9776;    </a>
+    
+    <nav class="navigation">
+      <ul>
+        <li><a onclick="changeSlide(0)">Home</a></li>
+        <li><a onclick="changeSlide(1)">Projects</a></li>
+        <li><a onclick="changeSlide(2)">About</a></li>
+        <li><a onclick="changeSlide(3)">Applets</a></li>
+        <li><a onclick="changeSlide(4)">Contact</li>
+      </ul>
     </nav>
-    <main>
-      <div class="home-container">
-        <div class="pic">
-          <img src="images/me.jpg" width="245" height="340">
-        </div>
-        <div class="logo">
-          <img src="images/logo.png" width="320" height="150">
-        </div>
-        <div class="about">
-          <h4>ABOUT</h4>
-          <hr>
-          I am a software engineering student at New England Tech. I am self taught in C, C++, Java and Python and am learning more languages as I persue my degree. 
-        </div>
-        <div class="featured">
-          <h4>FEATURED PROJECTS</h4>
-          <hr>
-          <i>PyBitConverter, 2021</i>
-          <br>
-          A console based program written in Python to convert Binary, Hexadecimal and Decimal numbers to other formats.
-          <br>
-          <a href="featured.html">View Project</a>
-        </div>
-        <div class="repos">
-          <h4>REPOS</h4>
-          <hr>
-          <ul>
-            <li><a href="https://github.com/ryanplante/pyBitConverter">https://github.com/ryanplante/pyBitConverter</a></li>
-            <li><a href="https://github.com/ryanplante/SE111_gitRepo">https://github.com/ryanplante/SE111_gitRepo</a></li>
-          </ul>
-        </div>
-        <div class="contact">
-          <h4>CONTACT</h4>
-          <hr>
-          <a href="https://www.linkedin.com/in/ryan-plante-1b9911169/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <!-- Copyright -->
-      <div class="text-left p-3">
-        © Ryan Plante 2023
-      </div>
-      <!-- Copyright -->
+    </div>
+    
+    <footer class="footer">
+      <p>&copy; 2023 Ryan Plante</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/82fb763cbc.js" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-somehash" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+  
+  </html>
